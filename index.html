@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<style>
+     .log-card {
+        background: #f0f0f0;
+        border-left: 4px solid #888;
+        margin: 4px 0;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-y: auto;
+    }
+    .log-card.log-info { border-left-color: #2196f3; background: #e3f2fd; }
+    .log-card.log-success { border-left-color: #4caf50; background: #e8f5e9; }
+    .log-card.log-error { border-left-color: #f44336; background: #ffebee; }
+
+    #data_elevation {
+        font-family: monospace;
+        white-space: pre-wrap;
+        word-break: break-all;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    #logs {
+        white-space: pre-wrap;
+        word-break: break-all;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Определение высоты рельефа</title>
+    <style>
+        /* Hide the spin buttons in WebKit browsers */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Hide spin buttons in Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <h1>Узнать высоту местности</h1>
+    <form id="coord-form" action="" method="get">
+        <div>
+            <label for="latitude">Широта:</label>
+            <input type="number" id="latitude" name="lat" step="any" required placeholder="например 55.7558">
+        </div>
+        <div style="margin-top: 8px;">
+            <label for="longitude">Долгота:</label>
+            <input type="number" id="longitude" name="lon" step="any" required placeholder="например 37.6176">
+        </div>
+        <div style="margin-top: 16px;">
+            <button type="submit">Узнать высоту</button>
+        </div>
+    </form>
+    <div id="data_map"></div>
+    <div id="data_elevation"></div>
+    <div id="logs"></div>
+    <script src="index.js"></script>
+</body>
+</html>
