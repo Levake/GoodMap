@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Демонстрационный лог (расстояние)
-    addLog(`Расстояние между точками: ${distanceInKmBetweenEarthCoordinates(55.7510, 37.601, 53.7440, 87.105)} км`, 'info');
+    addLog(`Расстояние между точками: ${distanceInKmBetweenEarthCoordinates(55.7510, 37.601, 53.7440, 87.105)} м`, 'info');
 
     // Обработка отправки формы
     form.addEventListener('submit', async function(event) {
